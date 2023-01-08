@@ -1,16 +1,20 @@
 <script>
 	export const prerender = true;
-	import Nav from './Nav.svelte';
-	import HeaderContent from './HeaderContent.svelte';
+	import Navbar from '../Navbar.svelte';
+	import PortraitPhotos from './PortraitPhotos.svelte';
 </script>
 
 <body>
-	<header id="home">
-		<div class="container">
-			<Nav />
-			<HeaderContent />
-		</div>
-	</header>
+	<Navbar />
+	<section id="portraits" class="container">
+		<p class="title">Families and couples, engagement, maternity, & more.</p>
+		<PortraitPhotos />
+		<p class="prevSection">
+			<a href="/landscape" data-sveltekit-preload-data="tap"
+				><span class="next">&lsaquo;</span> Landscape</a
+			>
+		</p>
+	</section>
 </body>
 
 <style>
@@ -23,11 +27,9 @@
 		line-height: 1.6;
 		background: white;
 	}
-	#home {
-		background: url('https://ik.imagekit.io/swlh9sefiw4t/background_e-YfotTVE.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672377520499')
-			no-repeat center right/cover;
-		height: 100vh;
-		color: white;
+	a {
+		text-decoration: none;
+		color: black;
 	}
 	.container {
 		max-width: 1280px;
@@ -35,18 +37,26 @@
 		margin: auto;
 	}
 
+	.title {
+		text-align: center;
+		font-size: 16px;
+		margin: 3rem 0 7rem 0;
+	}
+	.prevSection {
+		font-weight: 900;
+		text-align: left;
+		font-size: 25px;
+		margin: 5rem 0;
+	}
+	.next {
+		font-size: 30px;
+		margin-left: 5px;
+	}
+
 	/* Media Query */
-	@media (max-width: 550px) {
-		#home {
-			background-image: none;
-			height: 30rem;
-			color: white;
-		}
-		#home .container {
-			background: url('https://ik.imagekit.io/swlh9sefiw4t/phoneBackground_ry41R0qp7.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1672520947963')
-				no-repeat center right/cover;
-			width: auto;
-			height: 100vh;
+	@media (max-width: 500px) {
+		.prevSection {
+			font-size: 20px;
 		}
 	}
 </style>
