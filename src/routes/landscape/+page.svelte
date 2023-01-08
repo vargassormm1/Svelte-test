@@ -1,14 +1,14 @@
 <script>
 	export const prerender = true;
 	import Navbar from '../Navbar.svelte';
-	import LandScapePhotos from './LandScapePhotos.svelte';
+	import LandscapePhotos from './LandscapePhotos.svelte';
 </script>
 
 <body>
 	<Navbar />
 	<section id="landscape" class="container">
 		<p class="title">Travel & landscapes.</p>
-		<LandScapePhotos />
+		<LandscapePhotos />
 		<div class="navigation">
 			<p class="prevSection">
 				<a href="/city" data-sveltekit-preload-data="tap"
