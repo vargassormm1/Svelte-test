@@ -88,10 +88,7 @@
 			padding: 1rem 0;
 		}
 		#home-nav li {
-			margin-top: 10px;
 			padding: 1rem 0.7rem;
-			font-weight: 150;
-			font-size: 12px;
 		}
 	}
 </style>

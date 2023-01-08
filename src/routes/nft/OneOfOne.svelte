@@ -35,7 +35,6 @@
 		color: black;
 	}
 	.nft-section {
-		width: 950px;
 		margin-bottom: 3rem;
 	}
 	.nft-section p a {
@@ -65,7 +64,7 @@
 		}
 		.nftImages img {
 			width: 250px;
-			margin-bottom: 10px;
+			margin: 0 0 10px 0;
 		}
 	}
 </style>
